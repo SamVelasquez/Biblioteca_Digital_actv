@@ -22,7 +22,8 @@ public class Github_act extends AppCompatActivity {
         //declaro el sppiner
         spinner = (Spinner) findViewById(R.id.spinner);
         //creo el array del spinner
-        String[] NombreLibros = {" ", "Farenheith", "Revival", "El Alquimista"};
+        // se agregaron 2 libros mas en el array
+        String[] NombreLibros = {"El Poder","Despertar", "Farenheith", "Revival", "El Alquimista"};
         ArrayAdapter<String> adapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, NombreLibros);
         spinner.setAdapter(adapter);// asocio el spinner con el array
     }
@@ -30,17 +31,24 @@ public class Github_act extends AppCompatActivity {
         //precios originales
         String opcion = spinner.getSelectedItem().toString();
         if (opcion.equals("Farenheith")) {
-            int proucto1 = 50000;
+            int proucto1 = 70000; // se modifico el precio
             text1.setText(" valor total: "+ proucto1);
         }
         else if (opcion.equals("El Alquimista")) {
-            int proucto1 = 120000;
+            int proucto1 = 220000; // se modifico el precio
             text1.setText(" valor total: "+ proucto1);
         }
         else if (opcion.equals("Revival")) {
             int proucto1 = 450000;
             text1.setText(" valor total: "+proucto1);
+        }else if (opcion.equals("El Poder")) {
+            int proucto1 = 880000;
+            text1.setText(" valor total: "+ proucto1);
+        }
+        else if (opcion.equals("Despertar")) {
+            int proucto1 = 1560000;
+            text1.setText(" valor total: " + proucto1);
         }else
-            text1.setText(":v");
+            text1.setText("");
     }
 }
